@@ -37,10 +37,10 @@ Toast.LENGTH_LONG).show();
  }
  });
  }
- Pattern lowercase = Pattern.compile("^.[a-z].$");
- Pattern uppercase = Pattern.compile("^.[A-Z].$");
- Pattern number = Pattern.compile("^.[0-9].$");
- Pattern specialCharacter = Pattern.compile("^.[^a-zA-Z0-9].$");
+ Pattern lowercase = Pattern.compile(".*[a-z]+.*");
+ Pattern uppercase = Pattern.compile(".*[A-Z]+.*");
+ Pattern number = Pattern.compile(".*[0-9]+.*");
+ Pattern specialCharacter = Pattern.compile(".*[^a-zA-Z0-9]+.*");
  private Boolean isValidPassword(String password) {
  if (password.length() < 8) {
  return false;
